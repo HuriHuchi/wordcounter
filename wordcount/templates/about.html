@@ -1,5 +1,10 @@
-<h1>about</h1>
 
-<p>안녕하세요, 이곳은 글자를 세 주는 멋쟁이 사자처럼의 워드카운트 웹페이지입니다.</p>
+{% extends 'base.html' %}
 
-<a href="{%url 'home'%}">Home으로 돌아가기</a>
+{% block content %}
+    <h1 style="margin-top : 50px;">about</h1>
+
+    <p>안녕하세요, 이곳은 글자를 세 주는 저만의 워드카운트 웹페이지입니다.</p>
+
+    <a href="{%url 'home'%}">Home으로 돌아가기</a>
+    {% endblock %}

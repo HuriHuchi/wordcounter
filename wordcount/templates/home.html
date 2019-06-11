@@ -1,11 +1,16 @@
 <!--사용자에게 입력, 링크로 연결, 제출버튼 있어야함 -->
+{% extends 'base.html'%}
 
-<h1> 안녕하세요, 여기서 열심히 글자를 세세요!</h1>
+<body>
 
-<a href="{%url 'about'%}">ABOUT</a>
+{% block content %}
+    <h1 style="margin-top : 50px;"> 안녕하세요, 직접 만들어 본 wordcount 입니다.</h1>
 
-<form action="{%url 'result'%}">
-    <textarea cols="40" rows="10" name="fulltext"></textarea>
-    <br>
-    <input type="submit" value="Count!">
-</form>
+    <a href="{%url 'about'%}">ABOUT</a>
+
+    <form action="{%url 'result'%}">
+        <textarea cols="40" rows="10" name="fulltext"></textarea>
+        <br>
+        <input type="submit" value="Count!">
+    </form>
+{% endblock %}
